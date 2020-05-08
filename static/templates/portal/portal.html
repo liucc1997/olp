@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Outland Portal</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <input type="text" name="src">
+        <input type="submit" value="下载">
+    </form>
+    {% if download %}
+    <div>
+        <a href="{{ url }}">点击下载</a>
+    </div>
+    {% endif %}
+
+</body>
+</html>
