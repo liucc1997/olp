@@ -17,6 +17,7 @@ def check_remote_file():
     >20M 在网页中显示下载进度 下载完成后生成下载链接
     模式0 直接返回文件，服务器下载并实时返回给客户端
     """
+    
     pass
 
 def get_remote_file_name(url):

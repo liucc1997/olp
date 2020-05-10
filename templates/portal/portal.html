@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Outland Portal</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/static/css/Footer-Basic.css">
+    <link rel="stylesheet" href="/static/css/Search-Field-With-Icon.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="height: 120px;"></div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="container">
+        <div class="row">
+            <div class="col" style="width: 5%;"></div>
+            <div class="col-auto" style="width: 70%;">
+                <h1 class="text-center">OLPortal</h1>
+                <form action="" method="post">
+                <div class="search-container">
+                    {% csrf_token %} 
+                    <input type="text" class="search-input" name="src" placeholder="Input a URL...">
+                    <button class="btn btn-light search-btn" type="submit"> <i class="fa fa-download"></i></button>            
+                </div>
+                </form>
+            </div>
+            <div class="col" style="width: 5%;"></div>
+        </div>
+    </div>
+    <div>
+{% if download %}
+<div>
+    <a href="{{ url }}">点击下载</a>
+</div>
+{% endif %}
+        <div class="container">
+            <div class="row" style="height: 160px;">
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social" style="height: 45px;"><a href="http://github.com/liucc1997"><i class="icon ion-social-github"></i></a></div>
+            <p class="copyright">OLP V1.0 © 2020</p>
+        </footer>
+    </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
