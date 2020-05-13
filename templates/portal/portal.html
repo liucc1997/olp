@@ -31,7 +31,7 @@
                 <form action="" method="post">
                 <div class="search-container">
                     {% csrf_token %} 
-                    <input type="text" class="search-input" name="src" placeholder="Input a URL...">
+                    <input type="text" class="search-input" name="src" placeholder="Enter a URL...">
                     <button class="btn btn-light search-btn" type="submit"> <i class="fa fa-download"></i></button>            
                 </div>
                 </form>
@@ -60,6 +60,18 @@
     </div>
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/plugins/iCheck/icheck.min.js"></script>
+    <script src="/static/js/hullabaloo.js"></script>
+    <script type="text/javascript">
+        $.hulla = new hullabaloo();
+        {% if messages %}
+            {% for message in messages %}
+            setTimeout(function() {
+            $.hulla.send("{{ message }}", "{{ message.tags }}");
+            }, 10);
+            {% endfor %}
+        {% endif %}
+    </script>
 </body>
 
 </html>
