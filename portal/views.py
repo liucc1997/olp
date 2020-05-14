@@ -3,7 +3,7 @@ from django.http import HttpResponse,HttpRequest
 from django.views import View
 from django.contrib import messages
 import lib.file as lib_file
-SIZE1 = 20
+SIZE1 = 50
 SIZE2 = 200
 # Create your views here.
 class PortalView(View):
