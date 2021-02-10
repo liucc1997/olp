@@ -1,4 +1,3 @@
 #!/bin/bash
-ls -ali 
-ls 
+ls -al
 
